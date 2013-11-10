@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/mine/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap/bootstrap.min.css">
+    <script type="text/javascript" src="/javascripts/jquery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/javascripts/backbone/underscore-min.js"></script>
+    <script type="text/javascript" src="/javascripts/backbone/backbone-min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/mine/model/webspeechapi.js"></script>
+    <script type="text/javascript" src="/javascripts/mine/view/mainview.js"></script>
+    <script type="text/javascript" src="/javascripts/mine/main.js"></script>
+  </head>
+  <body>
+  	<div class="navbar navbar-inverse navbar-fixed-top">
+  		<div class="container">
+  			<div class="navbar-brand">Speech API</div>
+  			<div class="navbar-collapse">
+  				<!--
+  				<ul class="nav navbar-nav">
+  					<li><a href="#">Home</a></li>
+  					<li><a href="#">Menu</a></li>
+  					<li><a href="#">Contact</a></li>
+  				</ul>
+  			-->
+  			</div>
+  		</div>
+  	</div>
+	 <div id="app">
+	 	<br>
+	 	<div class="container">
+	 		<div class="row">
+	 			<textarea id="textarea_recog" class="form-control" rows=15 readonly></textarea>
+	 		</div>
+	 	</div>
+	 	<br>
+	 	<div class="container">
+	 		<div class="row">
+	 			<textarea id="textarea_status" class="form-control" rows=5 readonly></textarea>
+	 		</div>
+	 	</div>
+	 	<br>
+	 	<div class="container">
+ 			<div class="col-md-8">
+ 				<div class="btn-group btn_lang" data-toggle="buttons">
+	 				<label id="label_en" class="btn btn-info">
+	 					<input type="radio">English(NotYet)
+	 				</label>		 		
+			 		<label id="label_ja" class="btn btn-info active">
+			 			<input type="radio">Japanese
+			 		</label>
+	 			</div>
+	 			<button id="btn_continuous" class="btn btn-default btn_continuous" data-toggle="button">Continuous</button>
+ 			</div>
+ 			<br>
+ 			<div class="col-md-4">
+ 				<button id="btn_start" ype="button" class="btn btn-primary btn-lg">Start Talking</button>
+ 				<button id="btn_stop" ype="button" class="btn btn-danger btn-lg">Stop</button>
+ 			</div>
+	 	</div>
+	 	<!--
+	 	<div class="navbar navbar-fixed-bottom">
+
+	 	</div>
+	 -->
+	 </div>
+
+  </body>
+</html>
