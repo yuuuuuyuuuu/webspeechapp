@@ -30,6 +30,7 @@ var MainView = Backbone.View.extend({
 		var recogText = this.recogTextArea.val();
 		recogText += " " + this.model.getRecogText();
 		this.recogTextArea.val(recogText + "\n");
+		this.recogTextArea.scrollTop(this.recogTextArea[0].scrollHeight - this.recogTextArea.height());
 	},
 
 	updateStatus: function()
@@ -40,6 +41,11 @@ var MainView = Backbone.View.extend({
 		var date = new Date();
 		status += date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + " " + this.model.getStatus();
 		this.recogStatusArea.val(status + "\n");
+		this.recogStatusArea.scrollTop(this.recogStatusArea[0].scrollHeight - this.recogStatusArea.height());
+
+		//psconsole.scrollTop(
+        //psconsole[0].scrollHeight - psconsole.height()
+    	//  );
 	},
 
 	render: function(){
